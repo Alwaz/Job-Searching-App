@@ -7,6 +7,15 @@
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- Link to font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
     <title>Job Searching Application</title>
   </head>
   <body>
@@ -22,5 +31,26 @@
         <span>Cleaver Programmer</span>
       </div>
     </header>
+
+    <!-- Search Bar -->
+    <div class="search">
+      <div class="search__input">
+        <!-- input container -->
+        <div class="input__container">
+          <!-- icon -->
+          <i class="fas fa-search"></i>
+          <!-- input feild -->
+          <input type="text" id="filter-jobs" placeholder="Filter by title" />
+        </div>
+        <!--end of input container -->
+      </div>
+      <!--end of  search input container -->
+
+      <!-- button container -->
+      <div class="search__button">
+        <span>Find Jobs</span>
+      </div>
+      <!--end of search__button container -->
+    </div>
   </body>
 </html>
