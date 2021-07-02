@@ -5,3 +5,16 @@ let search = document
     let text = document.getElementById("filter-jobs").value;
     console.log(text, "whats in text");
   });
+
+//fetching data from .json file
+const getJobs = () => {
+  fetch("data.json")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
+};
+
+getJobs();

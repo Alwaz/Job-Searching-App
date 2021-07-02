@@ -161,10 +161,12 @@ header {
 
 .role-name span {
   font-size: 22px;
+  margin-left: 10px;
 }
 
 .job-description {
   height: 105px;
+  margin-left: 10px;
   overflow: hidden;
 }
 
