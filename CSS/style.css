@@ -126,6 +126,7 @@ header {
   gap: 40px;
   flex-grow: 1;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .jobTile {
