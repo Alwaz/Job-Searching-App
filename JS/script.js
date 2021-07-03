@@ -3,7 +3,10 @@ let search = document
   .querySelector(".search__button")
   .addEventListener("click", () => {
     let text = document.getElementById("filter-jobs").value;
-    console.log(text, "whats in text");
+    getJobs().then((job) => {
+      let filteredJobs = filterJobs(job, text);
+      showJobs(filteredJobs);
+    });
   });
 
 //defining function that will fetch data from .json file
@@ -58,3 +61,25 @@ const showJobs = (jobs) => {
 getJobs().then((data) => {
   showJobs(data);
 });
+
+// function to filter jobs
+const filterJobs = (jobs, searchedText) => {
+  if (searchedText) {
+    let filteredJobs = jobs.filter((job) => {
+      if (
+        job.roleName.toLowerCase().includes(searchedText) ||
+        job.requirements.content.toLowerCase().includes(searchedText) ||
+        job.company.toLowerCase().includes(searchedText) ||
+        job.type.toLowerCase().includes(searchedText)
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    return filteredJobs;
+  } else {
+    return jobs;
+  }
+};

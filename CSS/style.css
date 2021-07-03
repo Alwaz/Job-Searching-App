@@ -154,6 +154,7 @@ header {
 
 .top-section img {
   width: 50px;
+  border-radius: 10px;
 }
 
 .role-name {
@@ -168,7 +169,7 @@ header {
 .job-description {
   height: 105px;
   margin-left: 10px;
-  overflow: hidden;
+  flex-grow: 1;
 }
 
 .job-description span {
