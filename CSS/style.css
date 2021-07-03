@@ -126,7 +126,6 @@ header {
   gap: 40px;
   flex-grow: 1;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
 }
 
 .jobTile {
@@ -210,4 +209,16 @@ header {
 .message {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .joblist__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .joblist__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
